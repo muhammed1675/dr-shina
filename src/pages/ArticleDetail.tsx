@@ -154,7 +154,7 @@ export function ArticleDetail() {
           <div className="mt-8 flex flex-wrap items-center gap-5 text-sm text-white/70">
             <span className="flex items-center gap-3">
               <img src={PORTRAIT_IMAGE} alt="" className="h-9 w-9 rounded-full object-cover" />
-              Dr. Adebayo, MD
+              Dr. Oladeji, MD
             </span>
             {formatDate(current.published_at) && <time dateTime={current.published_at ?? undefined}>{formatDate(current.published_at)}</time>}
             <span className="flex items-center gap-1.5">

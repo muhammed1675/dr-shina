@@ -161,7 +161,7 @@ export function Home() {
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal direction="left">
             <div className="overflow-hidden rounded-2xl border border-line bg-card">
-              <img src={PORTRAIT_IMAGE} alt="Portrait of Dr. Adebayo in his study" className="aspect-[4/5] w-full object-cover" />
+              <img src={PORTRAIT_IMAGE} alt="Portrait of Dr. Oladeji in his study" className="aspect-[4/5] w-full object-cover" />
             </div>
           </Reveal>
           <Reveal direction="right" delay={0.1}>

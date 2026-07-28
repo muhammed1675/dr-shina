@@ -52,7 +52,7 @@ export function Navbar() {
           to="/"
           className={`font-heading text-xl tracking-tight transition-colors ${solid ? 'text-ink' : 'text-white'}`}>
           
-          Dr.<span className="text-teal">A</span>debayo
+          Dr.<span className="text-teal">O</span>ladeji
           <span className={`ml-2 align-middle text-[10px] uppercase tracking-[0.24em] ${solid ? 'text-subtle' : 'text-white/70'}`}>
             MD
           </span>

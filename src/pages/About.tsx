@@ -115,7 +115,7 @@ export function About() {
             <div className="overflow-hidden rounded-2xl border border-line">
               <img
                 src={PORTRAIT_IMAGE}
-                alt="Dr. Adebayo working at his desk"
+                alt="Dr. Oladeji working at his desk"
                 className="aspect-[4/3] w-full object-cover" />
               
             </div>

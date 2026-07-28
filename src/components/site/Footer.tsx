@@ -106,7 +106,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Dr. Adebayo. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Dr. Oladeji. All rights reserved.</p>
         </div>
       </div>
     </footer>);
