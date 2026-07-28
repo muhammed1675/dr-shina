@@ -84,8 +84,8 @@ export function Contact() {
   { label: 'YouTube', href: social.youtube, Icon: Youtube }].
   filter((item) => Boolean(item.href));
 
-  const fieldClass = (field: keyof FormState) =>
-  `w-full rounded-xl border bg-card px-4 py-3 text-sm text-ink outline-none transition-colors placeholder:text-subtle/60 focus:border-teal ${
+  const fieldClass = (field: keyof FormState, multiline = false) =>
+  `w-full rounded-xl border bg-card px-4 ${multiline ? 'py-3' : 'h-12'} text-sm text-ink outline-none transition-colors placeholder:text-subtle/60 focus:border-teal ${
   errors[field] ? 'border-destructive' : 'border-line'}`;
 
 
@@ -157,7 +157,7 @@ export function Contact() {
                 <label htmlFor="message" className="mb-2 block text-sm font-medium text-ink">
                   Message
                 </label>
-                <textarea id="message" rows={6} value={form.message} onChange={update('message')} className={fieldClass('message')} />
+                <textarea id="message" rows={6} value={form.message} onChange={update('message')} className={fieldClass('message', true)} />
                 {errors.message && <p className="mt-2 text-xs text-destructive">{errors.message}</p>}
               </div>
 

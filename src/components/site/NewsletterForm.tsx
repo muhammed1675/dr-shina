@@ -68,7 +68,7 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
             setEmail(event.target.value);
             if (status !== 'idle') setStatus('idle');
           }}
-          placeholder="you@example.com"
+          placeholder="Enter your email address"
           autoComplete="email"
           className={`h-12 flex-1 rounded-full border px-5 text-sm outline-none transition-colors focus:border-teal ${
           dark ?
