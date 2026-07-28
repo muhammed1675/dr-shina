@@ -1,5 +1,9 @@
 export default {
   darkMode: 'selector',
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}'
+  ],
   theme: {
     container: {
       center: true,
@@ -47,10 +51,7 @@ export default {
         mono: ['"Geist Mono"', 'monospace']
       },
       maxWidth: {
-        content: [
-  './index.html',
-  './src/**/*.{js,ts,jsx,tsx}'
-]
+        content: '80rem'
       },
       boxShadow: {
         card: '0 1px 2px rgba(17,17,17,0.04), 0 8px 24px rgba(17,17,17,0.05)',
