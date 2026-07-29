@@ -52,7 +52,7 @@ export function PageHero({
           src={image}
           alt={imageAlt}
           aria-hidden={imageAlt === '' ? true : undefined}
-          className="h-full w-full origin-center object-cover animate-kenburns" />
+          className="h-full w-full origin-center object-contain animate-kenburns" />
         
         <div className="absolute inset-0 bg-ink/60" />
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/70 to-transparent" />

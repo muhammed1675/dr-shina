@@ -40,7 +40,7 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
     if (error) {
       if (error.code === '23505' || /duplicate|unique/i.test(error.message)) {
         setStatus('success');
-        setMessage('You're already subscribed — thank you.');
+        setMessage("You're already subscribed — thank you.");
         setEmail('');
         return;
       }
