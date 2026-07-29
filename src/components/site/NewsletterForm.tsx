@@ -70,7 +70,7 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
           }}
           placeholder="Enter your email address"
           autoComplete="email"
-          className={`h-12 flex-1 rounded-full border px-5 text-base outline-none transition-colors focus:border-teal ${
+          className={`h-14 flex-1 rounded-full border px-5 text-lg outline-none transition-colors focus:border-teal ${
           dark ?
           'border-white/20 bg-white/5 text-white placeholder:text-white/40' :
           'border-line bg-white text-ink placeholder:text-subtle/70'}`
