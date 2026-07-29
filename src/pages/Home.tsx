@@ -16,7 +16,6 @@ import { EventCard } from '../components/site/EventCard';
 import { TestimonialStack } from '../components/site/Testimonials';
 import { MarqueeGallery } from '../components/site/Marquee';
 import { Lightbox } from '../components/site/Lightbox';
-import { NewsletterForm } from '../components/site/NewsletterForm';
 import { CountUp } from '../components/site/CountUp';
 import { CardSkeletonGrid, EmptyState, ErrorState, Skeleton } from '../components/site/states';
 
@@ -335,17 +334,6 @@ export function Home() {
           <TestimonialStack testimonials={testimonials.data} />
           }
         </div>
-      </section>
-
-      {/* Newsletter */}
-      <section className="mx-auto max-w-content px-6 py-24 lg:px-10 lg:py-28">
-        <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="font-heading text-3xl leading-tight text-ink sm:text-4xl">Ideas worth your inbox</h2>
-          <p className="mt-4 text-base leading-relaxed text-subtle">
-            One considered letter each month on medicine, leadership and building healthier communities.
-          </p>
-          <NewsletterForm className="mt-8 text-left" />
-        </Reveal>
       </section>
 
       <Lightbox
