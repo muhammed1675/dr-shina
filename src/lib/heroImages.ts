@@ -9,7 +9,8 @@ export const HERO_IMAGES = {
   articles: "/f9cac103-88bd-4f5c-99a0-f36b113aa1c8.jpg",
   gallery: "/bc7b284c-36d9-445a-a4ae-7a8eb8787840.jpg",
   projects: "/cdd26b2a-0355-4517-b51e-8fff57c94b5c.jpg",
-  contact: "/6432ec0b-f825-490f-94af-b1019c0aefce.jpg"
+  contact: "/6432ec0b-f825-490f-94af-b1019c0aefce.jpg",
+  rabbit: "/cdd26b2a-0355-4517-b51e-8fff57c94b5c.jpg"
 } as const;
 
 export const PORTRAIT_IMAGE = HERO_IMAGES.about;

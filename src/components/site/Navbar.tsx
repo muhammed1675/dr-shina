@@ -9,6 +9,7 @@ const LINKS = [
 { label: 'Articles', to: '/articles' },
 { label: 'Gallery', to: '/gallery' },
 { label: 'Projects & Speaking', to: '/projects-speaking' },
+{ label: 'Rabbit Farm', to: '/rabbit-farm' },
 { label: 'Contact', to: '/contact' }];
 
 

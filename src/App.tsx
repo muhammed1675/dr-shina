@@ -12,6 +12,7 @@ import { Articles } from './pages/Articles';
 import { ArticleDetail } from './pages/ArticleDetail';
 import { Gallery } from './pages/Gallery';
 import { ProjectsSpeaking } from './pages/ProjectsSpeaking';
+import { RabbitFarm } from './pages/RabbitFarm';
 import { Contact } from './pages/Contact';
 import { AdminLogin } from './pages/admin/Login';
 import { AdminDashboard } from './pages/admin/Dashboard';
@@ -20,6 +21,7 @@ import { GalleryAdmin } from './pages/admin/GalleryAdmin';
 import { ProjectsAdmin } from './pages/admin/ProjectsAdmin';
 import { EventsAdmin } from './pages/admin/EventsAdmin';
 import { MediaAdmin } from './pages/admin/MediaAdmin';
+import { RabbitFarmAdmin } from './pages/admin/RabbitFarmAdmin';
 import { TestimonialsAdmin } from './pages/admin/TestimonialsAdmin';
 import { MessagesAdmin } from './pages/admin/MessagesAdmin';
 import { SubscribersAdmin } from './pages/admin/SubscribersAdmin';
@@ -38,6 +40,7 @@ export function App() {
               <Route path="/articles/:slug" element={<ArticleDetail />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/projects-speaking" element={<ProjectsSpeaking />} />
+              <Route path="/rabbit-farm" element={<RabbitFarm />} />
               <Route path="/contact" element={<Contact />} />
             </Route>
 
@@ -56,6 +59,7 @@ export function App() {
               <Route path="projects" element={<ProjectsAdmin />} />
               <Route path="events" element={<EventsAdmin />} />
               <Route path="media" element={<MediaAdmin />} />
+              <Route path="rabbit-farm" element={<RabbitFarmAdmin />} />
               <Route path="testimonials" element={<TestimonialsAdmin />} />
               <Route path="messages" element={<MessagesAdmin />} />
               <Route path="subscribers" element={<SubscribersAdmin />} />

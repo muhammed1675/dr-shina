@@ -10,6 +10,7 @@ const QUICK_LINKS = [
 { label: 'Articles', to: '/articles' },
 { label: 'Gallery & Media', to: '/gallery' },
 { label: 'Projects & Speaking', to: '/projects-speaking' },
+{ label: 'Rabbit Farm', to: '/rabbit-farm' },
 { label: 'Contact', to: '/contact' }];
 
 

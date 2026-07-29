@@ -92,3 +92,48 @@ export interface SiteSetting {
   key: string;
   value: unknown;
 }
+
+/* ------------------------------- Rabbit Farm ------------------------------ */
+
+export interface RabbitBreed {
+  id: string;
+  name: string;
+  image_url: string | null;
+  description: string | null;
+  price: string | null;
+  availability: string | null; // available | limited | sold_out
+  display_order: number | null;
+  created_at?: string;
+}
+
+export interface RabbitGalleryImage {
+  id: string;
+  image_url: string;
+  title: string | null;
+  album: string | null;
+  display_order: number | null;
+  created_at?: string;
+}
+
+export interface RabbitPost {
+  id: string;
+  title: string;
+  slug: string;
+  cover_image_url: string | null;
+  excerpt: string | null;
+  body: string | null;
+  status: string;
+  published_at: string | null;
+  created_at?: string;
+}
+
+export interface RabbitEnquiry {
+  id: string;
+  name: string;
+  email: string;
+  phone: string | null;
+  interest: string | null;
+  message: string;
+  is_read: boolean;
+  created_at: string;
+}

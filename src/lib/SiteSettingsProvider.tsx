@@ -44,6 +44,11 @@ export const DEFAULT_SETTINGS = {
     headline: 'Projects & Speaking',
     subtitle: 'Community health initiatives and keynotes that turn ideas into measurable impact.'
   },
+  rabbit_hero: {
+    headline: 'Oladeji Rabbit Farm — Protein, Purpose & Prosperity',
+    subtitle:
+    'A working rabbitry built on the same principle as the clinic: healthy communities start with healthy nutrition and honest enterprise.'
+  },
   contact_hero: {
     headline: 'Let’s Start A Conversation',
     subtitle: 'For speaking invitations, collaborations, media requests and mentorship enquiries.'

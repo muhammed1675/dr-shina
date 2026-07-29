@@ -18,6 +18,7 @@ const HERO_KEYS: {key: string;label: string;}[] = [
 { key: 'articles_hero', label: 'Articles' },
 { key: 'gallery_hero', label: 'Gallery & Media' },
 { key: 'projects_hero', label: 'Projects & Speaking' },
+{ key: 'rabbit_hero', label: 'Rabbit Farm' },
 { key: 'contact_hero', label: 'Contact' }];
 
 
