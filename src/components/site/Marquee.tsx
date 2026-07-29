@@ -24,7 +24,7 @@ export function MarqueeRow({ images, direction = 'left', duration = 60, onSelect
           type="button"
           onClick={() => onSelect?.(image)}
           aria-label={image.title ? `View ${image.title}` : 'View image'}
-          className="group relative h-40 w-64 shrink-0 overflow-hidden rounded-xl border border-line/60 bg-card sm:h-48 sm:w-80">
+          className="group relative h-56 w-80 shrink-0 overflow-hidden rounded-xl border border-line/60 bg-card sm:h-64 sm:w-96">
           
             <img
             src={image.image_url}
