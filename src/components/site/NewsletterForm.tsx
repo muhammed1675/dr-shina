@@ -9,6 +9,73 @@ interface NewsletterFormProps {
   className?: string;
 }
 
+const mobileAlignmentCss = `
+  .newsletter-form-row {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .newsletter-email-input,
+  .newsletter-submit-button {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 52px !important;
+    min-height: 52px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    border-radius: 9999px !important;
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+
+  .newsletter-email-input {
+    padding: 0 22px !important;
+  }
+
+  .newsletter-email-input::placeholder {
+    font-size: 16px !important;
+    line-height: 1.2 !important;
+    opacity: 1 !important;
+  }
+
+  .newsletter-submit-button {
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 0 28px !important;
+  }
+
+  @media (min-width: 640px) {
+    .newsletter-form-row {
+      flex-direction: row !important;
+      align-items: center !important;
+    }
+
+    .newsletter-email-input,
+    .newsletter-submit-button {
+      height: 44px !important;
+      min-height: 44px !important;
+      font-size: 14px !important;
+    }
+
+    .newsletter-email-input::placeholder {
+      font-size: 14px !important;
+    }
+
+    .newsletter-submit-button {
+      width: auto !important;
+    }
+  }
+`;
+
+
 export function NewsletterForm({ variant = 'light', className = '' }: NewsletterFormProps) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
@@ -40,12 +107,12 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
     if (error) {
       if (error.code === '23505' || /duplicate|unique/i.test(error.message)) {
         setStatus('success');
-        setMessage("You&apos;re already subscribed — thank you.");
+        setMessage("You're already subscribed — thank you.");
         setEmail('');
         return;
       }
       setStatus('error');
-      setMessage("We couldn&apos;t subscribe you just now. Please try again.");
+      setMessage("We couldn't subscribe you just now. Please try again.");
       return;
     }
 
@@ -56,7 +123,9 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
 
   return (
     <form onSubmit={handleSubmit} className={className} noValidate>
-      <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center">
+      <style>{mobileAlignmentCss}</style>
+
+      <div className="newsletter-form-row">
         <label htmlFor={`newsletter-${variant}`} className="sr-only">
           Email address
         </label>
@@ -70,17 +139,18 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
           }}
           placeholder="Enter your email address"
           autoComplete="email"
-          className={`h-12 w-full min-w-0 flex-1 rounded-full border px-5 text-base font-normal leading-none outline-none transition-colors focus:border-teal sm:text-sm ${
-          dark ?
-          'border-white/20 bg-white/5 text-white placeholder:text-white/40' :
-          'border-line bg-white text-ink placeholder:text-subtle/70'}`
-          } />
-        
+          className={`newsletter-email-input min-w-0 flex-1 border font-normal outline-none transition-colors focus:border-teal ${
+            dark
+              ? 'border-white/20 bg-white/5 text-white placeholder:text-white/40'
+              : 'border-line bg-white text-ink placeholder:text-subtle/70'
+          }`}
+        />
+
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-full bg-teal px-7 text-base font-medium text-white transition-all hover:bg-teal-dark disabled:opacity-60 sm:w-auto sm:text-sm">
-          
+          className="newsletter-submit-button shrink-0 bg-teal font-medium text-white transition-all hover:bg-teal-dark disabled:opacity-60"
+        >
           {status === 'loading' && <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />}
           {status === 'success' && <Check className="h-4 w-4" aria-hidden="true" />}
           {status === 'loading' ? 'Subscribing' : 'Subscribe'}
@@ -90,9 +160,9 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
       <p
         aria-live="polite"
         className={`mt-3 min-h-[1.25rem] text-sm ${
-        status === 'error' ? 'text-destructive' : status === 'success' ? 'text-success' : dark ? 'text-white/50' : 'text-subtle'}`
-        }>
-        
+          status === 'error' ? 'text-destructive' : status === 'success' ? 'text-success' : dark ? 'text-white/50' : 'text-subtle'
+        }`}
+      >
         {message || 'One thoughtful email a month. No noise, unsubscribe anytime.'}
       </p>
     </form>
