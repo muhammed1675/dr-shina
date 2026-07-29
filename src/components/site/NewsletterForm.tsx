@@ -40,12 +40,12 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
     if (error) {
       if (error.code === '23505' || /duplicate|unique/i.test(error.message)) {
         setStatus('success');
-        setMessage("You're already subscribed — thank you.");
+        setMessage("You&apos;re already subscribed — thank you.");
         setEmail('');
         return;
       }
       setStatus('error');
-      setMessage('We couldn't subscribe you just now. Please try again.');
+      setMessage("We couldn&apos;t subscribe you just now. Please try again.");
       return;
     }
 
@@ -94,6 +94,6 @@ export function NewsletterForm({ variant = 'light', className = '' }: Newsletter
         
         {message || 'One thoughtful email a month. No noise, unsubscribe anytime.'}
       </p>
-    </form>);
-
+    </form>
+  );
 }
