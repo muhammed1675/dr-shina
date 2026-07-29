@@ -24,13 +24,13 @@ export function MarqueeRow({ images, direction = 'left', duration = 60, onSelect
           type="button"
           onClick={() => onSelect?.(image)}
           aria-label={image.title ? `View ${image.title}` : 'View image'}
-          className="group relative h-56 w-80 shrink-0 overflow-hidden rounded-xl border border-line/60 bg-card sm:h-64 sm:w-96">
+          className="group relative h-64 w-96 shrink-0 overflow-hidden rounded-xl border border-line/60 bg-card sm:h-72 sm:w-full">
           
             <img
             src={image.image_url}
             alt={image.title ?? ''}
             loading="lazy"
-            className="h-full w-full scale-[1.03] object-cover transition-transform duration-700 group-hover:scale-110" />
+            className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
           
             <span className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/20" />
           </button>
